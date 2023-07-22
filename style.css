@@ -1,0 +1,212 @@
+*
+{
+    margin:0;
+    padding:0;
+}
+body
+{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(231deg, rgba(22, 6, 40, 1) 0%, rgba(52, 28, 79, 1) 50%, rgba(88, 7, 125, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    width:450px;
+}
+h1
+{
+    color: hsl(0, 0%, 100%);
+    opacity: 0.75;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.2;
+}
+.display-container
+{
+    position:relative;
+    background-color: hsl(268, 75%, 9%);
+    border-radius: 2rem;
+    margin: 1rem 0;
+    padding-top: 0.35rem;
+    border-bottom: 0.35rem solid hsl(281, 89%, 26%);
+}
+.display {
+    width:100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    /* border: 1px solid white; */
+    padding: 1.15rem 1rem;
+    color: hsl(52, 100%, 62%);
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-right: 3.25rem;
+}
+.display-container button {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.input-container
+{
+    width: 86%;
+    background-color: hsl(268, 75%, 9%);
+    padding: 2rem;
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid hsl(281, 89%, 26%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.length-container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.pjj{
+    color:white;
+    font-size: 1.5rem;
+    /* font-weight: 600; */
+}
+.e
+{
+    color: yellow;
+    font-size: 1.5rem;
+}
+.slider
+{
+    width: 100%;
+    background: hsl(268, 47%, 21%);
+    background-image: linear-gradient(hsl(285, 91%, 52%), hsl(285, 91%, 52%));
+    appearance: none;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    outline: none;
+    height: 0.75rem;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    border-radius: 23px;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    border-radius: 50%;
+    box-shadow: 0  0 20 rgb(130, 130, 58);
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: yellow; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    box-shadow: 0  0 20 rgb(130, 130, 58);
+
+    background: yellow; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+.check
+{
+    color: white;
+    line-height: 30px;
+    font-size: 1.25rem;
+    letter-spacing: 0.75px;
+    gap:1.5rem;
+    
+}
+.strength-container
+{
+    
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.strength-container p
+{
+    color: white;
+    font-size: 1.5rem;
+    
+}
+.circle
+{
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    box-shadow: 0px 0px 20px rgb(155, 225, 172);
+}
+.generateBtn
+{
+    background-color: hsl(285, 91%, 52%);
+    text-align: center;
+    border-radius: 0.75rem;
+    border-bottom: 0.35rem solid hsl(52, 100%, 62%);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: hsl(52, 100%, 62%);
+    font-weight: 600;
+    font-size: 1.25rem;
+    height: 50px;
+    transform: translateZ(190px);
+}
+.check input {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid hsl(176, 100%, 44%);
+    border-radius: 0.35rem;
+}
+.check input:checked {
+    background-color:  hsl(176, 100%, 44%);
+}
+.check input:checked::before {
+    position: absolute;
+    content: "✔";
+    color: var(--dk-text);
+    font-size: 1.05rem;
+    font-weight: 600;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -3.5px;
+}
+.copy-tooltip
+{
+    position: absolute;
+    background-color: hsl(290, 70%, 36%);;
+    color: hsl(52, 100%, 62%);
+    font-size: 1.25rem;
+    top: 10px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+    /* scale: 0; */
+}
+.copy-tooltip.active
+{
+    opacity: 1;
+    transform: scale(1);
+}
+button img
+{
+    position: absolute;
+    top:-10px;
+    right: -7px;
+}
